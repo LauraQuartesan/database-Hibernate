@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="it.dei.unipd.Consegna" table="CONSEGNA">
+
+		<composite-id name="idConsegna">
+			<key-property name="dataConsegna" column="data_consegna" />
+			<key-many-to-one name="articolo" column="articolo"
+				class="it.dei.unipd.Articolo" />
+		</composite-id>
+
+		<property name="quantitàConsegnata" column="quantita_consegnata"
+			not-null="true" />
+		<property name="corriere" column="corriere" not-null="true" />
+		<property name="completata" column="completata" not-null="true" />
+
+	</class>
+</hibernate-mapping>

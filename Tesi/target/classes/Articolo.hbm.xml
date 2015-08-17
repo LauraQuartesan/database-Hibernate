@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="it.dei.unipd.Articolo" table="ARTICOLO">
+
+		<id name="codice" column="codice">
+			<generator class="assigned" />
+		</id>
+
+		<many-to-one name="ordine" column="ordine" class="it.dei.unipd.Ordine"
+			insert="false" update="false" />
+		<many-to-one name="modello" class="it.dei.unipd.Modello"
+			column="modello" insert="false" update="false" />
+		<many-to-one name="materiale" class="it.dei.unipd.Materiale"
+			column="materiale" insert="false" update="false" />
+
+		<property name="tipo" column="tipo" not-null="true" />
+		<property name="quantità" column="quantita" not-null="true" />
+		<property name="lavorazione" column="lavorazione" />
+
+	</class>
+</hibernate-mapping>

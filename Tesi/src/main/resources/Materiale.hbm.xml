@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="it.dei.unipd.Materiale" table="MATERIALE">
+
+		<id name="id" column="id">
+			<generator class="assigned" />
+		</id>
+
+		<set name="tessuti" table="COSTITUITO_DA_TESSUTO" cascade="all"
+			inverse="false">
+			<key column="materiale" />
+			<many-to-many class="it.dei.unipd.Tessuto">
+				<column name="codice_tessuto" />
+				<column name="colore_tessuto" />
+			</many-to-many>
+		</set>
+		<set name="filati" table="COSTITUITO_DA_FILATO" cascade="all"
+			inverse="false">
+			<key column="materiale" />
+			<many-to-many class="it.dei.unipd.Filato">
+				<column name="titolo_filato" />
+				<column name="colore_filato" />
+				<column name="fornitore_filato" />
+			</many-to-many>
+		</set>
+		<set name="articoli" table="ARTICOLO" cascade="all" inverse="false">
+			<key column="materiale" />
+			<one-to-many class="it.dei.unipd.Articolo" />
+		</set>
+
+	</class>
+</hibernate-mapping>
