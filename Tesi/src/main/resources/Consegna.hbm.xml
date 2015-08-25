@@ -11,9 +11,12 @@
 				class="it.dei.unipd.Articolo" />
 		</composite-id>
 
-		<property name="quantitàConsegnata" column="quantita_consegnata"
+		<property name="quantitàConsegnata">
+			<column name="quantita_consegnata" not-null="true"
+				check="(quantita_consegnata>=0)" />
+		</property>
+		<property name="corriere" column="corriere" length="32"
 			not-null="true" />
-		<property name="corriere" column="corriere" not-null="true" />
 		<property name="completata" column="completata" not-null="true" />
 
 	</class>

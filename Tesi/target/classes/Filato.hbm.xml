@@ -8,12 +8,15 @@
 		<composite-id name="idFilato">
 			<key-property name="titolo" column="titolo" />
 			<key-property name="codiceColore" column="codice_colore" />
-			<key-property name="fornitore" column="fornitore" />
+			<key-property name="fornitore" column="fornitore"
+				length="32" />
 		</composite-id>
 
-		<property name="costo" column="costo" type="java.math.BigDecimal"
-			precision="4" scale="2" not-null="true" />
-
+		<property name="costo" type="java.math.BigDecimal">
+			<column name="costo" precision="4" scale="2" not-null="true"
+				check="(costo>=0)" />
+		</property>
+		
 		<set name="materiali" table="COSTITUITO_DA_FILATO" cascade="all"
 			inverse="true">
 			<key>

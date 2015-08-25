@@ -7,7 +7,8 @@
 
 		<composite-id name="idTessuto" class="it.dei.unipd.TessutoId">
 			<key-property name="codice" column="codice" />
-			<key-property name="varianteColore" column="variante_colore" />
+			<key-property name="varianteColore" column="variante_colore"
+				length="32" />
 		</composite-id>
 
 		<set name="materiali" table="COSTITUITO_DA_TESSUTO" cascade="all"

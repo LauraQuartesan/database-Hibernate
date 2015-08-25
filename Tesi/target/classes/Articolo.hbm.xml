@@ -16,9 +16,11 @@
 		<many-to-one name="materiale" class="it.dei.unipd.Materiale"
 			column="materiale" insert="false" update="false" />
 
-		<property name="tipo" column="tipo" not-null="true" />
-		<property name="quantità" column="quantita" not-null="true" />
-		<property name="lavorazione" column="lavorazione" />
+		<property name="tipo" column="tipo" length="16" not-null="true" />
+		<property name="quantità">
+			<column name="quantita" not-null="true" check="(quantita>0)" />
+		</property>
+		<property name="lavorazione" column="lavorazione" length="16" />
 
 	</class>
 </hibernate-mapping>

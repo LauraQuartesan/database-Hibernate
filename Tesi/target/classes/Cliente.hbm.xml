@@ -11,9 +11,9 @@
 		</id>
 
 		<property name="email" column="email" length="32" />
-		<property name="nome" column="nome" not-null="true" />
-		<property name="telefono" column="telefono" />
-		<property name="indirizzo" column="indirizzo" />
+		<property name="nome" column="nome" length="32" not-null="true" />
+		<property name="telefono" column="telefono" length="30" />
+		<property name="indirizzo" column="indirizzo" length="64" />
 
 		<set name="ordini" table="ORDINE" cascade="all">
 			<key column="cliente" />
