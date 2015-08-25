@@ -18,9 +18,6 @@ public class Consegna {
 	}
 
 	public void setQuantit‡Consegnata(int quantit‡Consegnata) {
-		if (quantit‡Consegnata < 0) {
-			throw new IllegalArgumentException();
-		}
 		this.quantit‡Consegnata = quantit‡Consegnata;
 	}
 

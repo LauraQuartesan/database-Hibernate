@@ -23,9 +23,6 @@ public class Filato {
 	}
 
 	public void setCosto(BigDecimal costo) {
-		if (costo.compareTo(BigDecimal.ZERO) < 0) {
-			throw new IllegalArgumentException();
-		}
 		this.costo = costo;
 	}
 

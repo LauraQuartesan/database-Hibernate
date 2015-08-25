@@ -37,14 +37,10 @@ public class Articolo {
 	}
 
 	public void setMateriale(Materiale materiale) {
-		// modelloMateriale.setMateriale(materiale);
 		this.materiale = materiale;
 	}
 
 	public void setQuantità(int quantità) {
-		if (quantità < 0) {
-			throw new IllegalArgumentException();
-		}
 		this.quantità = quantità;
 	}
 

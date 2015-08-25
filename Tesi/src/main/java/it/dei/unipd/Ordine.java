@@ -28,9 +28,6 @@ public class Ordine {
 	}
 
 	public void setPrezzo(BigDecimal prezzo) {
-		if (prezzo.compareTo(BigDecimal.ZERO) < 0) {
-			throw new IllegalArgumentException();
-		}
 		this.prezzo = prezzo;
 	}
 
