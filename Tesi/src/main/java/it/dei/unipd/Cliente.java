@@ -5,18 +5,6 @@ import java.util.Set;
 import java.math.BigDecimal;
 
 public class Cliente {
-	@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj);
-	}
-
-	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
-		return super.hashCode();
-	}
-
 	private BigDecimal partitaIva;
 	private String email;
 	private String nome;

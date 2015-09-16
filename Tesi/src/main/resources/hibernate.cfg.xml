@@ -3,7 +3,7 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="connection.url">
-			jdbc:postgresql://localhost:5432/Tesi1
+			jdbc:postgresql://localhost:5432/PrimaLinea2
 		</property>
 		<property name="connection.driver_class">
 			org.postgresql.Driver
@@ -17,9 +17,7 @@
 		<property name="dialect">
 			org.hibernate.dialect.PostgreSQLDialect
 		</property>
-		<!-- Enable Hibernate's automatic session context management -->
 		<property name="current_session_context_class">thread</property>
-		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">update</property>
 		<mapping resource="Cliente.hbm.xml" />
 		<mapping resource="Ordine.hbm.xml" />

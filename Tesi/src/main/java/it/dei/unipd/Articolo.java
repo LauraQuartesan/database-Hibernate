@@ -64,27 +64,27 @@ public class Articolo {
 	}
 
 	public Ordine getOrdine() {
-		return ordine;
+		return this.ordine;
 	}
 
 	public String getTipo() {
-		return tipo;
+		return this.tipo;
 	}
 
 	public Materiale getMateriale() {
-		return materiale;
+		return this.materiale;
 	}
 
 	public int getQuantità() {
-		return quantità;
+		return this.quantità;
 	}
 
 	public String getLavorazione() {
-		return lavorazione;
+		return this.lavorazione;
 	}
 
 	public Modello getModello() {
-		return modello;
+		return this.modello;
 	}
 
 	public void setConsegne(Set<Consegna> consegne) {
@@ -92,6 +92,6 @@ public class Articolo {
 	}
 
 	public Set<Consegna> getConsegne() {
-		return consegne;
+		return this.consegne;
 	}
 }

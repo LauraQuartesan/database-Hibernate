@@ -13,7 +13,7 @@
 			insert="false" update="false">
 			<column name="cliente" precision="15" scale="0" />
 		</many-to-one>
-		<set name="articoli" table="ARTICOLO" cascade="all">
+		<set name="articoli" table="ARTICOLO" cascade="save-update, delete" >
 			<key column="ordine" />
 			<one-to-many class="it.dei.unipd.Articolo" />
 		</set>

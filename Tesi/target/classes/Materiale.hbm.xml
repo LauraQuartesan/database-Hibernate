@@ -26,7 +26,8 @@
 				<column name="fornitore_filato" />
 			</many-to-many>
 		</set>
-		<set name="articoli" table="ARTICOLO" cascade="all" inverse="false">
+		<set name="articoli" table="ARTICOLO" inverse="false"
+			cascade="save-update, delete">
 			<key column="materiale" />
 			<one-to-many class="it.dei.unipd.Articolo" />
 		</set>

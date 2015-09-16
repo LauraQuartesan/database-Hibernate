@@ -15,7 +15,7 @@
 			column="modello" insert="false" update="false" />
 		<many-to-one name="materiale" class="it.dei.unipd.Materiale"
 			column="materiale" insert="false" update="false" />
-		<set name="consegne" table="CONSEGNA" cascade="all">
+		<set name="consegne" table="CONSEGNA" cascade="save-update, delete">
 			<key column="articolo" />
 			<one-to-many class="it.dei.unipd.Consegna" />
 		</set>
